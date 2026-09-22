@@ -4,14 +4,16 @@ import HomeView from './views/HomeView.vue'
 import MembersView from './views/MembersView.vue'
 import MedicinesView from './views/MedicinesView.vue'
 import MedicationView from './views/MedicationView.vue'
+import MetricComparisonView from './views/MetricComparisonView.vue'
 import RecordsView from './views/RecordsView.vue'
 import ProfileView from './views/ProfileView.vue'
 
-type ViewName = 'home' | 'members' | 'medicines' | 'medication' | 'records' | 'profile'
+type ViewName = 'home' | 'members' | 'metric-comparison' | 'medicines' | 'medication' | 'records' | 'profile'
 
 const navItems: { key: ViewName; label: string; icon: string }[] = [
   { key: 'home', label: '首页', icon: '🏠' },
   { key: 'members', label: '家庭成员', icon: '👨‍👩‍👧‍👦' },
+  { key: 'metric-comparison', label: '指标对比', icon: '📊' },
   { key: 'medicines', label: '药品库存', icon: '💊' },
   { key: 'medication', label: '用药提醒', icon: '⏰' },
   { key: 'records', label: '就医记录', icon: '🏥' },
@@ -21,6 +23,7 @@ const navItems: { key: ViewName; label: string; icon: string }[] = [
 const views: Record<ViewName, Component> = {
   home: HomeView,
   members: MembersView,
+  'metric-comparison': MetricComparisonView,
   medicines: MedicinesView,
   medication: MedicationView,
   records: RecordsView,
