@@ -67,8 +67,19 @@ export const METRIC_META: Record<MetricType, MetricMeta> = {
   },
 }
 
-export const ACHIEVEMENTS: AchievementDefinition[] = [
-  { id: 'first_member', name: '首次建档', icon: '🏠', description: '创建第一位家庭成员档案' },
+/** Palette used to tell members apart on the comparison chart. */
+export const MEMBER_COLORS = [
+  '#3498db',
+  '#e74c3c',
+  '#27ae60',
+  '#f39c12',
+  '#9b59b6',
+  '#16a085',
+  '#e67e22',
+  '#2c3e50',
+]
+
+export const ACHIEVEMENTS: AchievementDefinition[] = [  { id: 'first_member', name: '首次建档', icon: '🏠', description: '创建第一位家庭成员档案' },
   { id: 'family_guardian', name: '全家守护者', icon: '👨‍👩‍👧‍👦', description: '建立 3 位及以上成员档案' },
   { id: 'first_metric', name: '健康管家', icon: '📈', description: '记录第一条健康指标' },
   { id: 'metric_expert', name: '健康记录达人', icon: '📊', description: '累计记录 20 条健康指标' },
